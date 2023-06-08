@@ -1,11 +1,21 @@
 const Booking = require("../models/Booking");
 const { NotFoundError } = require("../utils/errors");
 
-exports.getAllBookings = async (req, res) => {
+
+/*exports.getAllBookings = async (req, res) => {*/
   //limit?
   //offset?
+  exports.getAllBookings = async (req, res, next) => {//Asynkron funktion!
+    try {
+      const limit = Number(req.query.limit) || 10; //vilken limit har vi här?
+      const offset = Number(req.query.offset) || 0;
+      const query = Booking.find().limit(limit).skip(offset);
+  
 
-  const bookings = await Booking.find();
+/*   const bookings = await Booking.find();
+
+ */
+const bookings = await query.exec.find();
 
   const totalBookingsInDb = await Booking.countDocuments();
 
@@ -14,9 +24,15 @@ exports.getAllBookings = async (req, res) => {
     meta: {
       total: totalBookingsInDb,
       count: bookings.length,
+      limit: limit,
+      offset: offset,
     },
   });
+} catch(error) {
+  next(error);
+  }
 };
+exports.errorMiddleware = this.errorMiddleware;
 
 exports.getBookingById = async (req, res) => {
   const bookingId = req.params.bookingId;

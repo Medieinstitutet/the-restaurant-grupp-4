@@ -1,12 +1,20 @@
 import React from 'react';
 import { Carousel } from 'react-responsive-carousel';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
+import outsidebysea from "./../../assets/photos/outsidebysea.jpeg"
+import foodprepp from "./../../assets/photos/foodprepp.jpg"
+import table from "./../../assets/photos/table.jpg"
+
 
 const CarouselSlider = () => {
     return (
-        <Carousel autoPlay interval={3000} infiniteLoop showThumbs={false}>
 
+        <Carousel autoPlay interval={2000} infiniteLoop showThumbs={false} >
+            <img src={outsidebysea} alt="outside" />
+            <img src={foodprepp} alt="Prepping food" />
+            <img src={table} alt="Serving" />
         </Carousel>
+
     );
 };
 

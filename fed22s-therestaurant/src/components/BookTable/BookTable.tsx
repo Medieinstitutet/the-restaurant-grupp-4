@@ -7,14 +7,15 @@ import { BookingRadio } from "../BookingRadio/BookingRadio";
 import { BookingInput } from "../BookingInput/BookingInput";
 import { createNewBooking, getAllBookings } from "../../services/BookingService";
 import { IBooking, defaultBooking } from "../../models/IBooking";
+import "./bookTable.scss"
 export const BookTable = () => {
 
   const [userInput, setUserInput] = useState<IBooking>(defaultBooking)
   const [errMsg, setErrMsg] = useState("");
-  const [testBool, setTestBool] = useState(false);
+  const [isFree, setIsFree] = useState(false);
   const [dateState, setDateState] = useState(new Date());
   const [isDone, setIsDone] = useState(false);
-  const [testId, setTestId] = useState<IBooking>(defaultBooking);
+  const [userId, setUserId] = useState<IBooking>(defaultBooking);
   const [bookings, setBookings] = useState<IBooking[]>([]);
   
   useEffect(() => {
@@ -22,13 +23,13 @@ export const BookTable = () => {
         const data: IBooking[] = await getAllBookings();
         setBookings(data)
     }
-    const testfunc = async () => {   
+    const controlInput = async () => {   
       if (bookings) {
-        const test = checkDate(bookings, userInput.date, userInput.time);
-        const tablesLeft = checkTablesLeft(test);
+        const results = checkDate(bookings, userInput.date, userInput.time);
+        const tablesLeft = checkTablesLeft(results);
 
         if (tablesLeft === 0) {
-          setTestBool(false);
+          setIsFree(false);
           setUserInput(defaultBooking);
           setErrMsg("Det finns inga bord att boka den dagen!");
         }
@@ -37,7 +38,7 @@ export const BookTable = () => {
           setErrMsg("Vi har tyvärr bara ett bord ledigt, till max 6 gäster!");
           setUserInput(defaultBooking);
         } else {
-          setTestBool(true);
+          setIsFree(true);
         }
       }
     };
@@ -46,15 +47,15 @@ export const BookTable = () => {
       loadData();
     }
     if (userInput.date) {
-      testfunc();
+      controlInput();
     }
   }, [userInput]);
 
   const handleSubmit = async (e: FormEvent) => {
     e.preventDefault();
     setUserInput({ ...userInput, date: dateState.toLocaleDateString() });
-    if (testBool) {
-      setTestId(await createNewBooking(userInput))
+    if (isFree) {
+      setUserId(await createNewBooking(userInput))
       setIsDone(true)
     }
   }
@@ -69,7 +70,7 @@ export const BookTable = () => {
     }
   };
   return <>
-    {!testBool && (<div className="bookingBox">
+    {!isFree && (<div className="bookingBox">
       <form onSubmit={handleSubmit}>
         <Calendar value={dateState} onClickDay={setDateState} minDate={new Date()} ></Calendar>
         <BookingSelect userInput={userInput} handleChange={handleChange} />
@@ -78,11 +79,11 @@ export const BookTable = () => {
       </form>
       <h2>{errMsg}</h2>
     </div>)}
-    {testBool && !isDone && (
+    {isFree && !isDone && (
       <form onSubmit={handleSubmit}>
         <BookingInput userInput={userInput} handleChange={handleChange}></BookingInput>
       </form>
     )}
-    {isDone && testBool && <Confirmation name={testId.customer.name} msg={`Ditt bord är nu bokat med bokningsnummer: ${testId._id}`}></Confirmation>}
+    {isDone && isFree && <Confirmation name={userId.customer.name} msg={`Ditt bord är nu bokat med bokningsnummer: ${userId._id}`}></Confirmation>}
   </>
 }

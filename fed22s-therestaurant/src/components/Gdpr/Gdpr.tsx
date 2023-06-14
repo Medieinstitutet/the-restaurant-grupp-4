@@ -6,7 +6,7 @@ interface IGrdpProps {
 
 export const Gdpr = ({switchFunc}: IGrdpProps) => {
     return (<>
-        <div><p>
+        <div className="gdprBox"><p>
             Hej,
             Vi värnar om din integritet och skyddet av dina personuppgifter. Vi följer de riktlinjer och bestämmelser som fastställts i EU:s dataskyddsförordning (GDPR) för att säkerställa att dina personuppgifter hanteras på ett säkert och ansvarsfullt sätt.
             Vi samlar endast in de personuppgifter som är nödvändiga för att kunna tillhandahålla våra tjänster och förbättra din användarupplevelse. Vi använder dessa uppgifter enbart för det angivna ändamålet och delar dem inte med tredje part utan ditt samtycke, om det inte krävs enligt lag.
@@ -15,7 +15,9 @@ export const Gdpr = ({switchFunc}: IGrdpProps) => {
             Tack för att du väljer att vara en del av vår gemenskap!
             Vänliga hälsningar,
         </p>
+        <div className="gdprInput">
+             <label htmlFor="approve">Godkänn</label>
             <input type="checkbox" id="approve" onChange={switchFunc}></input>
-            <label htmlFor="approve">Godkänn</label></div>
+            </div></div>
     </>)
 }

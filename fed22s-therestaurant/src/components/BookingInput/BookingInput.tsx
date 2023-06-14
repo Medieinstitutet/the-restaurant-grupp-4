@@ -11,10 +11,9 @@ export const BookingInput = ({ userInput, handleChange }: IBookingInputProps) =>
   const [approved, setApproved] = useState(false);
   const switchFunc = () => {
     setApproved(!approved);
-    console.log(approved);
   }
   return (
-    <>
+    <div className="bookingInput">
       <input
         type="text"
         value={userInput.customer.name}
@@ -38,6 +37,6 @@ export const BookingInput = ({ userInput, handleChange }: IBookingInputProps) =>
       />
       <div><Gdpr switchFunc={switchFunc}></Gdpr></div>
       <button disabled={!approved}>Spara</button>
-    </>
+      </div>
   );
 };

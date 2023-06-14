@@ -1,0 +1,136 @@
+body {
+    background-image: url("../assets/photos/throughwindow.jpg");
+    background-repeat: no-repeat;
+    background-size:cover;
+    height: 100vh;
+}
+h1 {
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+    
+}
+form {
+    width: 90%;
+    margin: auto;
+}
+.bookingPageBox {
+    display: flex;
+    justify-content: center;
+    height: 80vh;
+    align-items: center;
+    font-family: Harrington;
+}
+.gdprBox {
+    width: 50%;
+    background-color: hsla(0, 0%, 0%, 0.3);
+    padding: 5%;
+    & .gdprInput {
+        display: flex;
+        flex-direction: row;
+        margin-top: 5%;
+        & label {
+            font-size: 2rem;
+            font-weight: 600;
+            color: #dad3d3;
+        }
+    }
+}
+.confirmationDiv {
+background-color: hsla(0, 0%, 0%, 0.3);
+padding: 5%;
+border-radius: 20px;
+font-family:'Times New Roman', Times, serif;
+& p {
+    font-size: 1.5rem;
+}
+& a:visited {
+    color: inherit;
+}
+}
+.bookingInput {
+    display: flex;
+    flex-direction: column;
+}
+input {
+    font-size: 1.5rem;
+    background-color: #370617;
+    width: 30vw;
+    height: 5vh;
+    color: #fff;
+    border-radius: 15px;
+    padding-left: 3%;
+}
+.radioDiv {
+    display: flex;
+    justify-content: flex-start;
+    & input {
+        width: 20vw;
+    }
+    & label {
+        font-size: 1.3rem;
+        text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+    }
+    & input[type=radio].radioInput {
+        accent-color: #370617;
+    }
+}
+.selectInput {
+    height: 5vh;
+    width: 80vw;
+    font-size: 1.3rem;
+    background-color: #370617;
+    color: #fff;
+    font-family: Harrington;
+    border-radius: 15px;
+}
+
+button {
+font-family: Harrington;
+width: 30vw;
+height: 5vh;
+font-size: larger;
+font-weight: 700;
+background-color: hsla(354, 93%, 22%, 0.4);
+border-radius: 15px;
+color: white;
+animation: fadeIn 1s;
+&:focus {
+    background-color: #370617;
+}
+&:hover {
+        color: #370617 !important;
+        text-shadow: 0 0 1px #fff, 0 0 2px #fff, 0 0 4px #fff, 0 0 6px #370617,
+            0 0 8px #370617, 0 0 10px #370617, 0 0 12px #54b3d6, 0 0 15px #370617;
+        transition: all 0.5s ease-in-out;
+        background-color: hsla(358, 97%, 31%, 0.3);
+        cursor: pointer;     
+}
+}
+button:disabled,
+button[disabled]{
+  background-color: #000;
+  color: #666666;
+  &:hover {
+    color: #666666;
+  }
+}
+@media (min-width:800px) {
+button {
+    width: 15vw;
+}
+.radioDiv {
+    & input {
+        width: 3vw;
+    }
+}
+.selectInput {
+    height: 5vh;
+    width: 20vw;
+}
+form {
+    width: 70%;
+}
+}
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+  }

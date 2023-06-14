@@ -1,5 +1,5 @@
 import { useState } from "react"
-import "./pageNavigation.css"
+import "./pageNavigation.scss"
 import { Link } from "react-router-dom";
 
 export const PageNavigation = () => {

@@ -1,0 +1,30 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  h2 {
+    text-align: center;
+  }
+  h3 {
+    text-align: center;
+    margin-top: 10px;
+    color: #f48c06;
+  }
+  label {
+    margin-top: 20px;
+  }
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  &__input {
+    width: 200px;
+    margin-top: 5px;
+  }
+  &__button {
+    margin: 20px;
+  }
+}

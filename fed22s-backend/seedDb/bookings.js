@@ -1,11 +1,11 @@
-//2023-06-15 - 18:00: 88 persons booked
-//2023-06-15 - 21:00: 51 persons booked
-//2023-06-16 - 18:00: 19 persons booked
-//2023-06-16 - 21:00: 31 persons booked
+//2023-06-16 - 18:00: 88 persons booked
+//2023-06-16 - 21:00: 51 persons booked
+//2023-06-17 - 18:00: 19 persons booked
+//2023-06-17 - 21:00: 31 persons booked
 
 exports.mockBookingData = [
   {
-    date: "2023-06-15",
+    date: "2023-06-16",
     time: "18:00",
     numberOfGuests: 6,
     customer: {
@@ -15,7 +15,7 @@ exports.mockBookingData = [
     },
   },
   {
-    date: "2023-06-15",
+    date: "2023-06-16",
     time: "18:00",
     numberOfGuests: 12,
     customer: {
@@ -25,7 +25,7 @@ exports.mockBookingData = [
     },
   },
   {
-    date: "2023-06-15",
+    date: "2023-06-16",
     time: "18:00",
     numberOfGuests: 12,
     customer: {
@@ -35,7 +35,7 @@ exports.mockBookingData = [
     },
   },
   {
-    date: "2023-06-15",
+    date: "2023-06-16",
     time: "18:00",
     numberOfGuests: 10,
     customer: {
@@ -45,7 +45,7 @@ exports.mockBookingData = [
     },
   },
   {
-    date: "2023-06-15",
+    date: "2023-06-16",
     time: "18:00",
     numberOfGuests: 10,
     customer: {
@@ -55,7 +55,7 @@ exports.mockBookingData = [
     },
   },
   {
-    date: "2023-06-15",
+    date: "2023-06-16",
     time: "18:00",
     numberOfGuests: 10,
     customer: {
@@ -65,7 +65,7 @@ exports.mockBookingData = [
     },
   },
   {
-    date: "2023-06-15",
+    date: "2023-06-16",
     time: "18:00",
     numberOfGuests: 10,
     customer: {
@@ -75,7 +75,7 @@ exports.mockBookingData = [
     },
   },
   {
-    date: "2023-06-15",
+    date: "2023-06-16",
     time: "18:00",
     numberOfGuests: 12,
     customer: {
@@ -85,7 +85,7 @@ exports.mockBookingData = [
     },
   },
   {
-    date: "2023-06-15",
+    date: "2023-06-16",
     time: "18:00",
     numberOfGuests: 6,
     customer: {
@@ -95,7 +95,7 @@ exports.mockBookingData = [
     },
   },
   {
-    date: "2023-06-15",
+    date: "2023-06-16",
     time: "21:00",
     numberOfGuests: 5,
     customer: {
@@ -105,7 +105,7 @@ exports.mockBookingData = [
     },
   },
   {
-    date: "2023-06-15",
+    date: "2023-06-16",
     time: "21:00",
     numberOfGuests: 9,
     customer: {
@@ -115,7 +115,7 @@ exports.mockBookingData = [
     },
   },
   {
-    date: "2023-06-15",
+    date: "2023-06-16",
     time: "21:00",
     numberOfGuests: 10,
     customer: {
@@ -125,7 +125,7 @@ exports.mockBookingData = [
     },
   },
   {
-    date: "2023-06-15",
+    date: "2023-06-16",
     time: "21:00",
     numberOfGuests: 2,
     customer: {
@@ -135,7 +135,7 @@ exports.mockBookingData = [
     },
   },
   {
-    date: "2023-06-15",
+    date: "2023-06-16",
     time: "21:00",
     numberOfGuests: 12,
     customer: {
@@ -145,7 +145,7 @@ exports.mockBookingData = [
     },
   },
   {
-    date: "2023-06-15",
+    date: "2023-06-16",
     time: "21:00",
     numberOfGuests: 10,
     customer: {
@@ -155,7 +155,7 @@ exports.mockBookingData = [
     },
   },
   {
-    date: "2023-06-15",
+    date: "2023-06-16",
     time: "21:00",
     numberOfGuests: 3,
     customer: {
@@ -165,7 +165,7 @@ exports.mockBookingData = [
     },
   },
   {
-    date: "2023-06-16",
+    date: "2023-06-17",
     time: "18:00",
     numberOfGuests: 3,
     customer: {
@@ -175,7 +175,7 @@ exports.mockBookingData = [
     },
   },
   {
-    date: "2023-06-16",
+    date: "2023-06-17",
     time: "18:00",
     numberOfGuests: 10,
     customer: {
@@ -185,7 +185,7 @@ exports.mockBookingData = [
     },
   },
   {
-    date: "2023-06-16",
+    date: "2023-06-17",
     time: "18:00",
     numberOfGuests: 6,
     customer: {
@@ -195,7 +195,7 @@ exports.mockBookingData = [
     },
   },
   {
-    date: "2023-06-16",
+    date: "2023-06-17",
     time: "21:00",
     numberOfGuests: 3,
     customer: {
@@ -205,7 +205,7 @@ exports.mockBookingData = [
     },
   },
   {
-    date: "2023-06-16",
+    date: "2023-06-17",
     time: "21:00",
     numberOfGuests: 10,
     customer: {
@@ -215,7 +215,7 @@ exports.mockBookingData = [
     },
   },
   {
-    date: "2023-06-16",
+    date: "2023-06-17",
     time: "21:00",
     numberOfGuests: 6,
     customer: {
@@ -225,7 +225,7 @@ exports.mockBookingData = [
     },
   },
   {
-    date: "2023-06-16",
+    date: "2023-06-17",
     time: "21:00",
     numberOfGuests: 12,
     customer: {

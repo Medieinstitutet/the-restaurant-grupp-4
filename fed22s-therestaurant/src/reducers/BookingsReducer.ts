@@ -13,7 +13,22 @@ export const BookingsReducer = (
     case "gotbookings": {
       return JSON.parse(action.payload);
     }
-    //default: (felhantering)
+    case "filtered": {
+      const searchPhrase = action.payload;
+
+      if (!searchPhrase) {
+        return bookings;
+      }
+
+      const filteredBookings = bookings.filter(
+        (booking) => booking.date === searchPhrase
+      );
+
+      return filteredBookings;
+    }
+
+    default:
+      break;
   }
 
   return bookings;

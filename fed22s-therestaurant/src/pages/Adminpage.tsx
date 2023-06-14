@@ -4,7 +4,6 @@ import { BookingsReducer } from "../reducers/BookingsReducer";
 import { BookingsContext } from "../contexts/BookingsContext";
 import { BookingDispatchContext } from "../contexts/BookingDispatchContext";
 import { getAllBookings } from "../services/BookingService";
-import { defaultBooking } from "../models/IBooking";
 import { CurrentBookingReducer } from "../reducers/CurrentBookingReducer";
 import {
   CurrentBookingContext,
@@ -37,7 +36,7 @@ export const Adminpage = () => {
     if (bookings.length === 0) {
       getData();
     }
-  });
+  }, []);
 
   return (
     <BookingsContext.Provider value={bookings}>

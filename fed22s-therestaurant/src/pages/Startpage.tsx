@@ -9,7 +9,6 @@ export const Startpage = () => {
 
       <StyledDiv>
         <p>Startpage is working</p>
-
         <CarouselSlider />
       </StyledDiv>
     </>

@@ -1,10 +1,13 @@
 import ContactForm from "../components/Contact/ContactForm";
+import { StyledForm } from "../components/Styled/StyledForm";
 
 export const Contactpage = () => {
   return (
     <>
       <p>Hej</p>
-      <ContactForm></ContactForm>
+      <StyledForm>
+        <ContactForm></ContactForm>
+      </StyledForm>
 
     </>
   );

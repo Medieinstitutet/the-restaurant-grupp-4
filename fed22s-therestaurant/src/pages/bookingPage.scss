@@ -18,9 +18,10 @@ form {
     height: 80vh;
     align-items: center;
     font-family: Harrington;
+    margin: auto;
 }
 .gdprBox {
-    width: 50%;
+    width: 100%;
     background-color: hsla(0, 0%, 0%, 0.3);
     padding: 5%;
     & .gdprInput {
@@ -128,6 +129,9 @@ button {
 }
 form {
     width: 70%;
+}
+.gdprBox {
+    width: 50%;
 }
 }
 @keyframes fadeIn {

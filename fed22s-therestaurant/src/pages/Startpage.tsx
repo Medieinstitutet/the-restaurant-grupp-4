@@ -10,7 +10,6 @@ export const Startpage = () => {
   const boxTexts = ["Ruta 1", "Ruta 2", "Ruta 3", "Ruta 4"];
   return (
     <>
-
       <StyledDiv>
         <div className="rubrik">
           <h1 className="fade-in-heading">The Local Host</h1>
@@ -25,6 +24,7 @@ export const Startpage = () => {
         </div>
         <BoxesStart />
       </StyledDiv>
+
     </>
   );
 };

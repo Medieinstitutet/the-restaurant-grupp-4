@@ -36,16 +36,16 @@ export default function ContactForm() {
         //skapa div att styla
         <form onSubmit={handleSubmit}>
             <label htmlFor="name">Namn:</label>
-            <input type="text" id="name" name="name" value={formData.name} onChange={handleChange} />
+            <input type="text" id="name" name="name" value={formData.name} onChange={handleChange} className="full-width-input" />
 
             <label htmlFor="number">Telefonnummer:</label>
-            <input type="text" id="number" name="number" value={formData.number} onChange={handleChange} />
+            <input type="text" id="number" name="number" value={formData.number} onChange={handleChange} className="full-width-input" />
 
             <label htmlFor="email">Email:</label>
-            <input type="email" id="email" name="email" value={formData.mail} onChange={handleChange} />
+            <input type="email" id="email" name="email" value={formData.email} onChange={handleChange} className="full-width-input" />
 
             <label htmlFor="message">Meddelande:</label>
-            <textarea id="message" name="message" value={formData.meddelande} onChange={handleChange} />
+            <textarea id="message" name="message" value={formData.message} onChange={handleChange} className="full-width-input" />
 
             <button type="submit">Skicka</button>
         </form>

@@ -1,0 +1,28 @@
+
+  .carousel-container {
+    margin-top: 150px;
+  }
+
+  .rubrik {
+    font-family: arial;
+    font-size: 32px;
+    font-weight: bold;
+    color: #FFBA08;
+    text-transform: uppercase;
+    text-align: center;
+    border: none;
+  }
+
+  .fade-in-heading {
+    opacity: 0;
+    animation: fade-in 2s ease-in forwards;
+  }
+  
+  @keyframes fade-in {
+    0% {
+      opacity: 0; 
+    }
+    100% {
+      opacity: 1; 
+    }
+  }

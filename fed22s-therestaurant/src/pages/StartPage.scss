@@ -1,0 +1,60 @@
+body {
+  background-image: url("../assets/photos/outside.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+}
+
+.container {
+  display: grid;
+  border: none;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto 1fr auto;
+  height: 100vh;
+}
+
+.cUDQbi{
+  height: auto !important;
+}
+
+.fyraboxar {
+  grid-row: 3;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  justify-items: center;
+}
+
+.rubrik {
+  margin-top: 80px;
+  font-family: Harrington;
+  font-size: 4rem;
+  font-weight: bold;
+  color: #FFBA08;
+  text-transform: uppercase;
+  text-align: center;
+
+}
+
+.fade-in-heading {
+  opacity: 0;
+  animation: fade-in 2s ease-in forwards;
+}
+.presentationBox {
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 5%;
+  border-radius: 15px;
+  font-size: 1rem;
+
+}
+
+
+@keyframes fade-in {
+  0% {
+    opacity: 0; 
+  }
+  100% {
+    opacity: 1; 
+  }
+
+}

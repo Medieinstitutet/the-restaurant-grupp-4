@@ -1,0 +1,138 @@
+body {
+    overflow-x: hidden;
+    margin: 0;
+}
+
+#menu {
+    z-index: 2;
+}
+
+#menu-bar {
+    width: 45px;
+    height: 40px;
+    margin: 40px 75px 50px;
+    cursor: pointer;
+}
+
+.bar {
+    height: 5px;
+    width: 100%;
+    background-color: #ffffff;
+    display: block;
+    border-radius: 5px;
+    transition: 0.3s ease;
+}
+
+#bar1 {
+    transform: translateY(-4px);
+}
+
+#bar3 {
+    transform: translateY(4px);
+}
+
+.nav {
+    transition: 0.3s ease;
+    display: none;
+}
+
+.nav ul {
+    padding: 0 22px;
+    font-family: Harrington;
+    font-weight: 600;
+}
+
+.nav li {
+    list-style: none;
+    padding: 12px 0;
+}
+
+.nav li a {
+    color: #ffffff;
+    font-size: 2rem;
+    text-decoration: none;
+}
+
+.nav li a:hover {
+    color: #370617 !important;
+    text-shadow: 0 0 1px #fff, 0 0 2px #fff, 0 0 4px #fff, 0 0 6px #370617,
+        0 0 8px #370617, 0 0 10px #370617, 0 0 12px #54b3d6, 0 0 15px #370617;
+    transition: all 0.5s ease-in-out;
+}
+
+.menu-bg,
+#menu {
+    top: 0;
+    position: absolute;
+    right: 0;
+}
+
+.menu-bg {
+    z-index: 1;
+    width: 0;
+    height: 0;
+    right: 0;
+    margin: 40px 70px 50px;
+    background: radial-gradient(circle, hsla(339, 80%, 12%, 0.5), hsla(339, 80%, 12%, 0.5));
+    border-radius: 50%;
+    transition: 0.3s ease;
+    
+}
+
+.change {
+    display: block;
+}
+
+.change .bar {
+    background-color: white;
+}
+
+.change #bar1 {
+    transform: translateY(4px) rotateZ(-45deg);
+}
+
+.change #bar2 {
+    opacity: 0;
+}
+
+.change #bar3 {
+    transform: translateY(-6px) rotateZ(45deg);
+}
+
+.change-bg {
+    width: 520px;
+    height: 460px;
+    transform: translate(40%, -20%);  
+}
+
+.navContainer {
+    max-width: 100%;
+}
+
+@media (min-width:800px) {
+    #menu-bar {
+        display: none;
+    }
+
+    .menu-bg {
+        display: none;
+    }
+
+    .nav {
+        display: inline;
+        width: 100%;
+    }
+
+    .nav ul {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+
+    #menu {
+        width: 100%;
+        position: absolute;
+        background: linear-gradient(hsla(339, 80%, 12%, 0.9), hsla(339, 80%, 12%, 0.6), hsla(339, 80%, 12%, 0.2),hsla(339, 80%, 12%, 0.1),hsla(339, 80%, 12%, 0.0));
+        height: 15vh;
+    }
+}

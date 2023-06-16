@@ -1,0 +1,62 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #03071eb4;
+  padding-top: 10px;
+  @media (min-width: 800px) {
+    width: 50%;
+  }
+
+  h2 {
+    text-align: center;
+  }
+  h3 {
+    text-align: center;
+    margin-top: 10px;
+    color: #f48c06;
+  }
+  label {
+    margin-top: 20px;
+  }
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  &__input {
+    width: 200px;
+    margin-top: 5px;
+  }
+  &__button {
+    margin: 20px;
+  }
+  .selectInput {
+    all: revert;
+    margin-top: 10px;
+    &:hover {
+      all: revert;
+      margin-top: 10px;
+    }
+  }
+  .radioDiv {
+    all: revert;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+
+    .radioInput {
+      all: revert;
+      margin-top: 10px;
+      margin-left: 5px;
+      margin-right: 10px;
+    }
+    label {
+      all: revert;
+      margin-top: 10px;
+    }
+  }
+}

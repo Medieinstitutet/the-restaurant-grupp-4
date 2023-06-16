@@ -1,0 +1,28 @@
+.comment-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  margin-top: auto;
+}
+
+.comment-section {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  justify-items: center;
+  gap: 30px;
+  padding: 5px;
+}
+
+.comment {
+  padding: 10px;
+  border: 0px;
+  font-style: italic;
+}
+
+.author {
+  font-weight: bold;
+}
+
+.comment-text {
+  margin-top: 3px;
+}

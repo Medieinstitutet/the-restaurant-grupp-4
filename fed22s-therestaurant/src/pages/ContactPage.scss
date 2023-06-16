@@ -1,0 +1,60 @@
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url("../assets/photos/outsidebysea.jpeg"); //lagt till från här till...
+  background-repeat: no-repeat;
+  background-size:cover;
+  min-height: 100vh;
+  animation: fadeIn 1s;
+  flex-direction: column;
+  @media (min-width:800px) {
+    flex-direction: row;
+ }
+}
+
+.styled-form {
+  display: flex;
+  flex-direction: column;
+  max-width: 400px;
+  margin-right: 20px;
+  background-color: rgba(55, 6, 23, 0.9);
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.styled-form input[type="text"],
+.styled-form textarea {
+  margin-bottom: 10px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+
+.styled-form input[type="text"],
+.styled-form textarea,
+.styled-form input[type="submit"] {
+  display: block;
+  width: 100%;
+}
+
+.mapimage img {
+  width: 300px;
+  margin-top: 0px;
+  border-radius: 5px;
+}
+
+.text-container {
+  width: 300px;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0; 
+  }
+  100% {
+    opacity: 1; 
+  }
+}

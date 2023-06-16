@@ -1,0 +1,39 @@
+.carousel-root {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: auto;
+}
+
+.carousel .carousel-status {
+    display: none;
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 5px;
+    font-size: 10px;
+    text-shadow: 1px 1px 1px rgba(0,0,0,0.9);
+    color: #000000;
+}
+
+.carousel.carousel-slider .control-arrow {
+  display: none;
+}
+.carousel-root ul {
+  display: none;
+}
+
+
+.carousel-root img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.carousel-root .carousel-slider {
+  position: relative;
+}
+.carousel-container {
+  border: 1px solid #323232;
+}
+
